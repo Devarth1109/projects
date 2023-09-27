@@ -1,0 +1,36 @@
+Name=CarForest
+about: The application is provided car for rent if any people have no car then they
+can easily get a car on rent for their trips. in this web application user can 
+signup,login,logout,forgotpassword,set new password and their email validation otp is provided
+into the user email and some basic facilties are there for user and manager side. manager can 
+add update and delete the car with car details like car imavge, car brand, car name, car mileage, car fuel type
+and manymore basic infromation about car and customer easily choose the car with its facilty.
+customer can rent a car for a day for a week and for a month and its charges are inthe basis of fuel economy.
+price for hatchbacks are :- 800/- day to 1300/- day
+price for sedans are :- 1000/- day to 1800/- day
+price for SUVs are :- 2000/- day to 5000/- day
+price for MUVs are :- 1700/- day to 3500/- day
+price for convertibles are :- 10000/- day to 20000/- day
+price for vans are :- 15000/- day to 25000/- day
+price for soprts are :- 30000/- day to 40000/- day
+price for luxurys are :- 50000/- day to 80000/- day
+------------------------------------------------------------------------
+Modual: User:signup,login,logout,ForgotPassword,cart,purchase
+------------------------------------------------------------------------
+System informaiton:
+frontend:HTML,CSS,JS
+backend:Python
+---------------------------------------------------------------------------
+Hardware configration:
+---------------------------------------------------------------------------
+DEVLOPER SIDE:
+
+Device name	DESKTOP-4KCT3Q2
+Processor	Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz   1.19 GHz
+Installed RAM	8.00 GB (7.79 GB usable)
+System type	64-bit operating system, x64-based processor
+
+Edition	Windows 10 Home Single Language
+Version	22H2
+Installed on	‎21-‎06-‎2023
+OS build	19045.3448
