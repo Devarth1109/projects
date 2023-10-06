@@ -1,0 +1,112 @@
+{% extends 'seller_header.html' %}
+
+{% load static %}
+
+{% block content %}
+    <section class="ftco-section contact-section">
+      <div class="container">
+        <div class="row d-flex mb-5 contact-info">
+          <div class="col-md-4">
+            <div class="row mb-5">
+              <div class="col-md-12">
+                <div class="border w-100 p-4 rounded mb-2 d-flex">
+                  <div class="icon mr-3">
+                    <span class="icon-map-o"></span>
+                  </div>
+                  <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="border w-100 p-4 rounded mb-2 d-flex">
+                  <div class="icon mr-3">
+                    <span class="icon-mobile-phone"></span>
+                  </div>
+                  <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="border w-100 p-4 rounded mb-2 d-flex">
+                  <div class="icon mr-3">
+                    <span class="icon-envelope-o"></span>
+                  </div>
+                  <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 block-9 mb-md-5">
+            {% if msg %}
+              <p style="color: green;">{{msg}}</p>
+            {% elif msg1 %}
+              <p style="color: red;">{{msg1}}</p>
+            {% else %}
+              <p style="color: red;"></p>
+            {% endif %}
+            <form action="{% url 'update_car' pk=car.pk %}" class="bg-light p-5 contact-form" method="post" enctype="multipart/form-data" >
+              {% csrf_token %}
+              <div class="form-group">
+                <select name='cartype' class='form-control' id='cartype'>
+                    <option>---Select Car Type---</option>
+                    <option value='sedan'>Sedan</option>
+                    <option value="hatchback">Hatchback</option>
+                    <option value="muv">MUV</option>
+                    <option value="suv">SUV</option>
+                    <option value="convertible">Convertible</option>
+                    <option value="van">Van</option>
+                    <option value="sports">Sports</option>
+                    <option value="luxury">Luxury</option>
+                 </select>
+              </div>
+              <div class="form-group">
+                <input type="file" name="c_image" class="form-control" placeholder="Car Image">
+              </div>
+              <div class="form-group">
+                <input type="text" name="c_brand" class="form-control" placeholder="Brand">
+              </div>
+              <div class="form-group">
+                <input type="text" name="c_name" class="form-control" placeholder="Car Name">
+              </div>
+              <div class="form-group">
+                <input type="text" name="c_model" class="form-control" placeholder="Car Model">
+              </div>
+              <div class="form-group">
+                <input type="text" name="c_fuel" class="form-control" placeholder="Fuel Type">
+              </div>
+              <div class="form-group">
+                <input type="text" name="c_price" class="form-control" placeholder="Car Price Per Hour">
+              </div>
+              <div class="form-group">
+                <input type="number" name="c_mileage" class="form-control" placeholder="Car Mileage">
+              </div>
+              <div class="form-group">
+                <input type="text" name="c_transmission" class="form-control" placeholder="Car Transmission">
+              </div>
+              <div class="form-group">
+                <input type="number" name="c_seats" class="form-control" placeholder="Car Seats">
+              </div>
+              <div class="form-group">
+                <input type="number" name="c_luggage" class="form-control" placeholder="Car Luggage spacer">
+              </div>
+              <div class="form-group">
+                <input type="text" name="c_features" class="form-control" placeholder="Car features">
+              </div>
+              <div class="form-group">
+                <input type="text" name="c_description" class="form-control" placeholder="Car Description">
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-primary py-3 px-5">
+              </div>
+            </form>
+          
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <div id="map" class="bg-white"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+
+    {% endblock %}

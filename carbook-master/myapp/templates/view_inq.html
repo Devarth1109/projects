@@ -1,0 +1,23 @@
+{% extends 'seller_header.html' %}
+
+{% load static %}
+
+{% block content %}
+{% for i in inq %}
+  <div class="col-md-3">
+		<div class="services services-2 w-100 text-center">
+      <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-car"></span>
+      </div>
+      <div class="text w-100">
+        <h3 class="heading mb-2">{{i.contact_number}}</h3>
+        <p>{{i.email_address}}</p>
+        <p>{{i.from_date}}</p>
+        <p>{{i.to_date}}</p>
+        <p>{{i.number_of_cars}}</p>
+        <p>{{i.color_of_car}}</p>
+        <p>{{i.location}}</p>
+     	</div>
+    </div>
+	</div>
+{% endfor %}
+{% endblock %}
